@@ -17,7 +17,15 @@ from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
 
+import argparse
 
+parser = argparse.ArgumentParser(description="Nombre d'arbres")
+parser.add_argument(
+    "--tree", type=str, default="Toto", help="Un prénom à afficher"
+)
+
+args = parser.parse_args()
+print(args.prenom)
 
 
 os.chdir("/home/onyxia/work/application")
